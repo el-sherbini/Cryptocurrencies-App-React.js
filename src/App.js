@@ -19,7 +19,7 @@ const App = () => {
         <Navbar />
       </div>
       <div className="main">
-        <layout>
+        <Layout>
           <div className="routes">
             <Switch>
               <Route exact path="/">
@@ -39,13 +39,13 @@ const App = () => {
               </Route>
             </Switch>
           </div>
-        </layout>
+        </Layout>
         <div className="footer">
           <Typography.Title
             level={5}
             style={{ color: "white", textAlign: "center" }}
           >
-            Cryptoverse <br />
+            Cryptos <br />
             All rights reserved
           </Typography.Title>
           <Space>
