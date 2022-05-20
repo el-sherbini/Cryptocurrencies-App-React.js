@@ -58,7 +58,7 @@ const Homepage = () => {
       {/* simplified to only show first 10 not more */}
       <div className="home-heading-container">
         <Title level={2} className="home-title">
-          Latest Crypto News
+          Latest Cryptocurrencies News
         </Title>
         <Title level={4} className="show-more">
           <Link to="/news">Show More</Link>
