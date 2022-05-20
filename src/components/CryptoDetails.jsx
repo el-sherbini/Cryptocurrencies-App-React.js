@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import HTMLReactParser from "html-react-parser";
 import { useParams } from "react-router-dom";
 import millify from "millify";
-import { Col, Row, Typography, Select } from "antd";
+import { Col, Row, Typography } from "antd";
 import {
   MoneyCollectOutlined,
   DollarCircleOutlined,
@@ -23,7 +23,6 @@ import Loader from "./Loader";
 import LineChart from "./LineChart";
 
 const { Title, Text } = Typography;
-const { Option } = Select;
 
 const CryptoDetails = () => {
   const { coinId } = useParams(); // takes the id in the url and allows you to use it
