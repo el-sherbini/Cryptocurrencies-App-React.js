@@ -5,7 +5,6 @@ import { Layout, Typography, Space } from "antd";
 import {
   Navbar,
   Homepage,
-  Exchanges,
   Cryptocurrencies,
   CryptoDetails,
   News,
@@ -19,14 +18,11 @@ const App = () => {
         <Navbar />
       </div>
       <div className="main">
-        <layout>
+        <Layout>
           <div className="routes">
             <Switch>
               <Route exact path="/">
                 <Homepage />
-              </Route>
-              <Route exact path="/exchanges">
-                <Exchanges />
               </Route>
               <Route exact path="/cryptocurrencies">
                 <Cryptocurrencies />
@@ -39,19 +35,18 @@ const App = () => {
               </Route>
             </Switch>
           </div>
-        </layout>
+        </Layout>
         <div className="footer">
           <Typography.Title
             level={5}
             style={{ color: "white", textAlign: "center" }}
           >
-            Cryptoverse <br />
+            Cryptos <br />
             All rights reserved
           </Typography.Title>
           <Space>
             <Link to="/">Home</Link>
             <Link to="/cryptocurrencies">Cryptocurrencies</Link>
-            <Link to="exchanges">Exchanges</Link>
             <Link to="/news">News</Link>
           </Space>
         </div>

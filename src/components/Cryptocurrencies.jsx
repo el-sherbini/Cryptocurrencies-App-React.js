@@ -21,7 +21,6 @@ const Cryptocurrencies = ({ simplified }) => {
   }, [cryptosList, searchTerm]); // Execute when cryptosList or searchTerm changed
 
   if (isFetching) {
-    console.log("test");
     return <Loader />;
   }
 
@@ -36,8 +35,8 @@ const Cryptocurrencies = ({ simplified }) => {
         </div>
       )}
 
+      {/* gutter is spaces between the items for all directions */}
       <Row gutter={[32, 32]} className="crypto-card-container">
-        {/* gutter is spaces between the items for all directions */}
         {cryptos?.map((currency) => (
           <Col
             xs={24}
@@ -46,7 +45,7 @@ const Cryptocurrencies = ({ simplified }) => {
             className="crypto-card"
             key={currency.uuid}
           >
-            <Link to={`/crypto/${currency.id}`}>
+            <Link key={currency.uuid} to={`/crypto/${currency.uuid}`}>
               <Card
                 title={`${currency.rank}. ${currency.name}`}
                 extra={<img className="crypto-image" src={currency.iconUrl} />}
@@ -54,7 +53,7 @@ const Cryptocurrencies = ({ simplified }) => {
               >
                 <p>Price: {millify(currency.price)}</p>
                 <p>Market Cap: {millify(currency.marketCap)}</p>
-                <p>Daily Change: {millify(currency.change)}</p>
+                <p>Daily Change: {currency.change}%</p>
               </Card>
             </Link>
           </Col>
