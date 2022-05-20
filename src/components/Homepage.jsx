@@ -29,12 +29,6 @@ const Homepage = () => {
         </Col>
         <Col span={12}>
           <Statistic
-            title="Total Exchanges"
-            value={millify(globalStats.totalExchanges)}
-          ></Statistic>
-        </Col>
-        <Col span={12}>
-          <Statistic
             title="Total Market Cap"
             value={millify(globalStats.totalMarketCap)}
           ></Statistic>
