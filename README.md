@@ -1,7 +1,6 @@
 # Cryptos
 
 > Cryptos is an application used to get data for cryptocurrencies and it's new, built with React, Redux and Coinranking API.
-> Live demo [_here_](https://bre.is/eJtzatRH).
 
 ## Installation and Setup Instructions
 
